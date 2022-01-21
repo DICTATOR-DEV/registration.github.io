@@ -6,18 +6,17 @@ body {
   background-image: url('logo.svg');
   background-repeat: no-repeat;
   background-size : contain;
-  background-size : 900px   900px;
-
+ 
 }
 
 form {
   text-align: center;
-  line-height: 60px;
+  line-height: 30px;
   background-color: rgba(199, 115, 5, 0.5);
   margin: auto;
-  width: 60vw;
-  padding: 5px;
-  margin-top: 10%;
+  width: 100vw;
+  padding: 0.5px;
+  margin-top: 1%;
   border-radius: 20px;
 }
 .flex {
@@ -44,30 +43,40 @@ input {
   font-size: 17px;
   line-height: 25px;
   width: 70%;
+  padding: 2px 5px;
 }
-select {
-  margin: 15px 0px;
-  padding: 5px;
-  width: 35%;
-  border: none;
-}
+
 textarea{
   width: 50%;
   min-height: 6rem;
   resize: vertical;
   padding: 0.5rem 0 0 0.5rem;
 }
+select {
+  text-align: center;
+  border-radius: 15px;
+  border: none;
+  background-color: whitesmoke;
+  color: rgb(2, 2, 2);
+  font-size: 17px;
+  line-height: 25px;
+  padding: 2px 5px;
+  margin: 15px 0px;
+  padding: 5px;
+  width: 35%;
+  
+}
 input,
 label {
     margin: .4rem 0;
 }
 p{
-  font-size: 1.12rem;
+  font-size: 2rem;
  }
  
  #radio-btn,
  #check-box {
-  margin-right: 0.5rem;
+  margin-right: 0.1rem;
   min-height: 1.2rem;
   min-width: 1.2rem;
  }

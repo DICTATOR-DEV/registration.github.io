@@ -80,6 +80,21 @@ p{
   min-height: 1.2rem;
   min-width: 1.2rem;
  }
+ textarea {
+  text-align: center;
+  border-radius: 15px;
+  border: none;
+  background-color: whitesmoke;
+  color: rgb(2, 2, 2);
+  font-size: 17px;
+  line-height: 25px;
+  padding: 2px 5px;
+  margin: 15px 0px;
+  padding: 5px;
+  width: 35%;
+  
+}
+
 button {
   background-color: rgb(36, 26, 177);
   border: none;

@@ -3,7 +3,7 @@
 }
 
 body {
-  background-image: url('logo.svg');
+  background-image: none;
   background-repeat: no-repeat;
   background-size : contain;
  
@@ -17,14 +17,15 @@ form {
   width: 100vw;
   padding: 0.5px;
   margin-top: 1%;
-  border-radius: 20px;
+  border-radius: 100px;
 }
+
 .flex {
   display: flex;
   align-items: center;
 }
 h4 {
-  color: white;
+  color: black;
   font-size: 28px;
 }
 
@@ -34,12 +35,14 @@ form div {
   justify-content: center;
   margin: 10px 0;
 }
+
+
 input {
   text-align: center;
   border-radius: 15px;
   border: none;
   background-color: whitesmoke;
-  color: rgb(2, 2, 2);
+  color: rgb(0, 0, 0);
   font-size: 17px;
   line-height: 25px;
   width: 50%;
@@ -65,8 +68,8 @@ select {
   margin: 15px 0px;
   padding: 5px;
   width: 50%;
+  }
   
-}
 input,
 label {
     margin: .4rem 0;
@@ -96,14 +99,14 @@ textarea {
 }
 
 button {
-  background-color: rgb(36, 26, 177);
+  background-color:  #b312f3;
   border: none;
   padding: 5px;
   margin: auto;
   justify-content: center;
   border-radius: 10px;
   cursor: pointer;
-  color: white;
+  color:  #f1c40f;
   width: 25%;
   font-size: 20px;
 }
@@ -113,5 +116,6 @@ button:hover {
 }
 
 .footnote {
-  color: whitesmoke;
+  color: rgb(235, 0, 0);
+  font-size: 20px;
 }

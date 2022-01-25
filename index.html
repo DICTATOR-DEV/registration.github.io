@@ -1,73 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>REGISTRATION FORM</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <form>
-      <h4>Patient Registration Form</h4>
 
-      <div>
-         <input type="name-label" placeholder=" name " />
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>REGISTRATION FORM</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-      <div>
-         <input type="email" placeholder=" e-mail " />
-      </div>
+<body>
+  <form onsubmit="return error () ">
+    <h4>Patient Registration Form</h4>
 
-      <div>
-          <input type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==10) return false;"placeholder=" phone no" /> 
-      </div>
-
-      <div>
-       <b>D.O.B</b> </div>
-         <div><input type="date" placeholder=" D.O.B "  class="box" >
-      </div>
-
-      <select name="" id="gender">
-        <option value="0">Choose Gender</option>
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
-        <option value="Other">Other</option>
-      </select>
-      
-      <br>
-       <select name="" id="specialist">
-        <option value="0">Choose Specialist</option>
-        <option value="Dentist">Dentist</option>
-        <option value="Cardiologist">Cardiologist</option>
-        <option value="Psychiatrists">Psychiatrists</option>
-        <option value="Ophthalmologists">Ophthalmologists</option>
-        <option value="Neurologists">Neurologists</option>
-        <option value="Orthopedic">Orthopedic</option>
-        <option value=""></option>
-      </select>
-      <br>
-      <select name="" id="Doctors">
-        <option value="0">Choose Doctors</option>
-        <option value="mansi">Dr. Mansi</option>
-        <option value="vinit">Dr. Vinit</option>
-        <option value="janvi">Dr. Janvi</option>
-        <option value="Aditya">MD Dr. Aditya</option>
-        <option value="ujay">Dr. Ujay</option>
-        <option value="ajay">Dr. Ajay</option>
-
-
-      </select>
-      <div>
-        <p><b>Currently taking any medication?</b></p> </div>
-        <input type='radio' name='answer' id='radio-btn' value='YES' /><b>YES</b> </br>
-        <input type='radio' name='answer' id='radio-btn' value='NO' /><b>NO</b> </br>
-       </div>
-      <div>  <label><b>Ask any Queries</b></label></div>
-        <textarea type='text' placeholder='Enter your comment here...'></textarea>
+    <div>
+      <input type="name-label" placeholder=" name " />
     </div>
-      <button class="btn-send flex">BOOK NOW</button>
-      <p class="footnote">&copy; Group 17 Major Project</p>  
-    </form>
-  </body>
+
+    <div>
+      <input type="email" placeholder=" e-mail " />
+    </div>
+
+    <script>
+      function error() {
+          var a = document.getElementById("mobilenumber").value;
+          if (a == "") {
+            document.getElementById("messages").innerHTML = "Please fill Mobile Number";
+            return false;
+          }
+          if (a.length > 10) {
+            document.getElementById("messages").innerHTML = " Mobile Number must be 10 digit";
+            return false;
+          }
+          if (a.length < 10) {
+              document.getElementById("messages").innerHTML = " Mobile Number must<br> be 10 digit";
+               return false;
+          }
+          if ((a.charAt(0) != 9) && (a.charAt(0) != 8) && (a.charAt(0) != 7) && (a.charAt(0) != 6)) {
+              document.getElementById("messages").innerHTML = " Mobile Number must <br> start with 9, 8, 7 and 6";
+              return false;
+          }
+  
+      }
+    </script>
+
+    <div>
+      <input type="number" placeholder=" phone no "  onKeyPress="if(this.value.length==10) return false;" id="mobilenumber" value="">
+     </div>
+     <b><font size="+2"> <span id="messages" style="color: rgb(0, 0, 0);"> </span> </b></font>
+    </div>
+
+    <div>
+      <b>D.O.B</b>
+    </div>
+    <div><input type="date" placeholder=" D.O.B " class="box">
+    </div>
+
+    <select name="" id="gender">
+      <option value="0">Choose Gender</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <br>
+    <select name="" id="specialist">
+      <option value="0">Choose Specialist</option>
+      <option value="Dentist">Dentist</option>
+      <option value="Cardiologist">Cardiologist</option>
+      <option value="Psychiatrists">Psychiatrists</option>
+      <option value="Ophthalmologists">Ophthalmologists</option>
+      <option value="Neurologists">Neurologists</option>
+      <option value="Orthopedic">Orthopedic</option>
+      <option value=""></option>
+    </select>
+    <br>
+    <select name="" id="Doctors">
+      <option value="0">Choose Doctors</option>
+      <option value="mansi">Dr. Mansi</option>
+      <option value="vinit">Dr. Vinit</option>
+      <option value="janvi">Dr. Janvi</option>
+      <option value="Aditya">MD Dr. Aditya</option>
+      <option value="ujay">Dr. Ujay</option>
+      <option value="ajay">Dr. Ajay</option>
+
+
+    </select>
+    <div>
+      <p><b>Currently taking any medication?</b></p>
+    </div>
+    <input type='radio' name='answer' id='radio-btn' value='YES' /><b>YES</b> </br>
+    <input type='radio' name='answer' id='radio-btn' value='NO' /><b>NO</b> </br>
+    </div>
+    <div> <label><b>Ask any Queries</b></label></div>
+    <textarea type='text' placeholder='Enter your comment here...'></textarea>
+    </div>
+    <button class="btn-send flex">BOOK NOW</button>
+    <p class="footnote">&copy; Group 17 Major Project</p>
+  </form>
+</body>
+
 </html>

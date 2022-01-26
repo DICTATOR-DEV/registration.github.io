@@ -5,25 +5,27 @@
 body {
   background-image: none;
   background-repeat: no-repeat;
-  background-size : contain;
+  background-size : cover;
+  background-color: aquamarine;
  
 }
 
 form {
   text-align: center;
   line-height: 30px;
-  background-color: rgba(199, 115, 5, 0.5);
+  background-image:linear-gradient(#fa7203,#ffffff,#27b803) ;
   margin: auto;
   width: 100vw;
   padding: 0.5px;
   margin-top: 1%;
-  border-radius: 100px;
+  border-radius: 50px;
 }
 
 .flex {
   display: flex;
   align-items: center;
 }
+
 h4 {
   color: black;
   font-size: 28px;
@@ -36,16 +38,15 @@ form div {
   margin: 10px 0;
 }
 
-
 input {
   text-align: center;
   border-radius: 15px;
-  border: none;
-  background-color: whitesmoke;
-  color: rgb(0, 0, 0);
+  border-color:rgb(2, 2, 2);
+  background-color: rgb(255, 255, 255);
   font-size: 17px;
   line-height: 25px;
-  width: 50%;
+  margin: 15px 0px;
+  width: 40%;
   padding: 2px 5px;
 }
 
@@ -56,26 +57,22 @@ textarea{
   padding: 0.5rem 0 0 0.5rem;
 }
 
+
 select {
   text-align: center;
   border-radius: 15px;
-  border: none;
-  background-color: whitesmoke;
-  color: rgb(2, 2, 2);
-  font-size: 17px;
+  border-color:rgb(2, 2, 2);
+  background-color: rgb(255, 255, 255);
+  font-size: 18px;
   line-height: 25px;
   padding: 2px 5px;
   margin: 15px 0px;
-  padding: 5px;
-  width: 50%;
+  width: 40%;
   }
   
-input,
-label {
-    margin: .4rem 0;
-}
-p{
-  font-size: 2rem;
+
+p {
+  font-size: 1rem;
  }
  
  #radio-btn,
@@ -87,9 +84,8 @@ p{
 textarea {
   text-align: center;
   border-radius: 15px;
-  border: none;
-  background-color: whitesmoke;
-  color: rgb(2, 2, 2);
+  background-color: rgb(255, 255, 255);
+  border-color:rgb(2, 2, 2);
   font-size: 17px;
   line-height: 25px;
   padding: 2px 5px;
@@ -116,6 +112,6 @@ button:hover {
 }
 
 .footnote {
-  color: rgb(235, 0, 0);
+  color: rgb(0, 0, 0);
   font-size: 20px;
 }

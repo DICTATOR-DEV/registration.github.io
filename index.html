@@ -14,7 +14,8 @@
     <h4>Patient Registration Form</h4>
 
     <div>
-      <input type="name-label" placeholder=" name " />
+      <input type="name-label" placeholder=" Your name "/>
+      <input type="name-label" placeholder=" last name "/>
     </div>
 
     <div>
@@ -47,25 +48,40 @@
     <div>
       <input type="number" placeholder=" phone no "  onKeyPress="if(this.value.length==10) return false;" id="mobilenumber" value="">
      </div>
-     <b><font size="+2"> <span id="messages" style="color: rgb(0, 0, 0);"> </span> </b></font>
+     <b><font size="+1.5"> <span id="messages" style="color: rgb(0, 0, 0);"> </span> </b></font>
     </div>
 
+
+    <p><b>Date of Birth</b></p>
     <div>
-      <b>D.O.B</b>
+     <input type="date" />
     </div>
-    <div><input type="date" placeholder=" D.O.B " class="box">
+     
+    <div>
+        <select name="" id="slot">
+        <option value="0"> Slot</option>
+        <option value="9am-10am">9am-10am</option>
+        <option value="10am-11am">10am-11am</option>
+        <option value="11am-12pm">11am-12pm</option>
+        <option value="12pm-1pm">12pm-1pm</option>
+        <option value="2pm-3pm">2pm-3pm</option>
+        <option value="3pm-4pm">3pm-4pm</option>
+        <option value="4pm-5pm">4pm-5pm</option>
+        <option value=""></option>
+        </select>
     </div>
 
     <select name="" id="gender">
-      <option value="0">Choose Gender</option>
+      <option value="0"> Gender</option>
       <option value="Male">Male</option>
       <option value="Female">Female</option>
       <option value="Other">Other</option>
+      <option value=""></option>
     </select>
 
     <br>
     <select name="" id="specialist">
-      <option value="0">Choose Specialist</option>
+      <option value="0"> Specialist</option>
       <option value="Dentist">Dentist</option>
       <option value="Cardiologist">Cardiologist</option>
       <option value="Psychiatrists">Psychiatrists</option>
@@ -76,14 +92,15 @@
     </select>
     <br>
     <select name="" id="Doctors">
-      <option value="0">Choose Doctors</option>
+      <option value="0"> Doctors</option>
       <option value="mansi">Dr. Mansi</option>
       <option value="vinit">Dr. Vinit</option>
       <option value="janvi">Dr. Janvi</option>
       <option value="Aditya">MD Dr. Aditya</option>
       <option value="ujay">Dr. Ujay</option>
       <option value="ajay">Dr. Ajay</option>
-
+      <option value=""></option>
+      
 
     </select>
     <div>

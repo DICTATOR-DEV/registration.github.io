@@ -2,119 +2,116 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>REGISTRATION FORM</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <h1>Enter Your OTP</h1>
+</head>
+
+<style>
+    * {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    }
+    
+    h1 {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: bolder;
+    }
+    
+    div {
+        text-align: center;
+    }
+    
+    input {
+        border: 0;
+        outline: 0;
+        background: transparent;
+        border-bottom: 2px solid black;
+        width: 50px;
+        font-size: 2rem;
+        font-weight: bolder;
+        text-align: center;
+        padding: 5px;
+        margin-left: 10px;
+    }
+    
+    .btn {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: .5rem;
+        padding-left: 1rem;
+        border-radius: 1rem;
+        border: 2px solid black;
+        font-size: 1.5rem;
+        font-weight: bolder;
+        text-align: center;
+        width: auto;
+        background: rgb(80, 144, 218);
+    }
+    
+    form {
+        background: rgb(255, 188, 3);
+        border: 2px solid black;
+        box-shadow: var(--box-shadow);
+        text-align: center;
+        padding: 2rem;
+        border-radius: 3rem;
+        max-width: 300px;
+        margin: 25px auto 0;
+    }
+</style>
+
+<script>
+    function getCodeBoxElement(index) {
+        return document.getElementById('codeBox' + index);
+    }
+
+    function onKeyUpEvent(index, event) {
+        const eventCode = event.which || event.keyCode;
+        if (getCodeBoxElement(index).value.length === 1) {
+            if (index !== 4) {
+                getCodeBoxElement(index + 1).focus();
+            } else {
+                getCodeBoxElement(index).blur();
+                // Submit code
+                console.log('submit code ');
+            }
+        }
+        if (eventCode === 8 && index !== 1) {
+            getCodeBoxElement(index - 1).focus();
+        }
+    }
+
+    function onFocusEvent(index) {
+        for (item = 1; item < index; item++) {
+            const currentElement = getCodeBoxElement(item);
+            if (!currentElement.value) {
+                currentElement.focus();
+                break;
+            }
+        }
+    }
+</script>
 </head>
 
 <body>
-  <form onsubmit="return error () ">
-    <h4>Patient Registration Form</h4>
-
-    <div>
-      <input type="name-label" placeholder=" Your name "/>
-      <input type="name-label" placeholder=" last name "/>
-    </div>
-
-    <div>
-      <input type="email" placeholder=" e-mail " />
-    </div>
-
-    <script>
-      function error() {
-          var a = document.getElementById("mobilenumber").value;
-          if (a == "") {
-            document.getElementById("messages").innerHTML = "Please fill Mobile Number";
-            return false;
-          }
-          if (a.length > 10) {
-            document.getElementById("messages").innerHTML = " Mobile Number must be 10 digit";
-            return false;
-          }
-          if (a.length < 10) {
-              document.getElementById("messages").innerHTML = " Mobile Number must<br> be 10 digit";
-               return false;
-          }
-          if ((a.charAt(0) != 9) && (a.charAt(0) != 8) && (a.charAt(0) != 7) && (a.charAt(0) != 6)) {
-              document.getElementById("messages").innerHTML = " Mobile Number must <br> start with 9, 8, 7 and 6";
-              return false;
-          }
-  
-      }
-    </script>
-
-    <div>
-      <input type="number" placeholder=" phone no "  onKeyPress="if(this.value.length==10) return false;" id="mobilenumber" value="">
-     </div>
-     <b><font size="+1.5"> <span id="messages" style="color: rgb(0, 0, 0);"> </span> </b></font>
-    </div>
+    <form>
+        <div>
+            <input class="form-control" placeholder="0" maxlength="1" />
+            <input class="form-control" placeholder="0" maxlength="1" />
+            <input class="form-control" placeholder="0" maxlength="1" />
+            <input class="form-control" placeholder="0" maxlength="1" />
 
 
-    <p><b>Date of Birth</b></p>
-    <div>
-     <input type="date" />
-    </div>
-     
-    <div>
-        <select name="" id="slot">
-        <option value="0"> Slot</option>
-        <option value="9am-10am">9am-10am</option>
-        <option value="10am-11am">10am-11am</option>
-        <option value="11am-12pm">11am-12pm</option>
-        <option value="12pm-1pm">12pm-1pm</option>
-        <option value="2pm-3pm">2pm-3pm</option>
-        <option value="3pm-4pm">3pm-4pm</option>
-        <option value="4pm-5pm">4pm-5pm</option>
-        <option value=""></option>
-        </select>
-    </div>
 
-    <select name="" id="gender">
-      <option value="0"> Gender</option>
-      <option value="Male">Male</option>
-      <option value="Female">Female</option>
-      <option value="Other">Other</option>
-      <option value=""></option>
-    </select>
-
-    <br>
-    <select name="" id="specialist">
-      <option value="0"> Specialist</option>
-      <option value="Dentist">Dentist</option>
-      <option value="Cardiologist">Cardiologist</option>
-      <option value="Psychiatrists">Psychiatrists</option>
-      <option value="Ophthalmologists">Ophthalmologists</option>
-      <option value="Neurologists">Neurologists</option>
-      <option value="Orthopedic">Orthopedic</option>
-      <option value=""></option>
-    </select>
-    <br>
-    <select name="" id="Doctors">
-      <option value="0"> Doctors</option>
-      <option value="mansi">Dr. Mansi</option>
-      <option value="vinit">Dr. Vinit</option>
-      <option value="janvi">Dr. Janvi</option>
-      <option value="Aditya">MD Dr. Aditya</option>
-      <option value="ujay">Dr. Ujay</option>
-      <option value="ajay">Dr. Ajay</option>
-      <option value=""></option>
-      
-
-    </select>
-    <div>
-      <p><b>Currently taking any medication?</b></p>
-    </div>
-    <input type='radio' name='answer' id='radio-btn' value='YES' /><b>YES</b> </br>
-    <input type='radio' name='answer' id='radio-btn' value='NO' /><b>NO</b> </br>
-    </div>
-    <div> <label><b>Ask any Queries</b></label></div>
-    <textarea type='text' placeholder='Enter your comment here...'></textarea>
-    </div>
-    <button class="btn-send flex">BOOK NOW</button>
-    <p class="footnote">&copy; Group 17 Major Project</p>
-  </form>
+        </div>
+        <div>
+            <input type="submit" value="OTP" class="btn"> <input type="reset" value="Reset" class="btn">
+        </div>
+    </form>
+</body>
 </body>
 
 </html>

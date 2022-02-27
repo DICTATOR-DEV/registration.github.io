@@ -21,30 +21,9 @@
         <div>
             <input type="email" placeholder=" e-mail " />
         </div>
-        <script style="display: none">
-            function error() {
-                var a = document.getElementById("mobilenumber").value;
-                if (a == "") {
-                    document.getElementById("messages").innerHTML = "Please fill Mobile Number";
-                    return false;
-                }
-                if (a.length > 10) {
-                    document.getElementById("messages").innerHTML = " Mobile Number must be 10 digit";
-                    return false;
-                }
-                if (a.length < 10) {
-                    document.getElementById("messages").innerHTML = "Mobile Number must be 10 digit";
-                    return false;
-                }
-                if ((a.charAt(0) != 9) && (a.charAt(0) != 8) && (a.charAt(0) != 7) && (a.charAt(0) != 6)) {
-                    document.getElementById("messages").innerHTML = " Mobile Number must start with 9, 8, 7 and 6";
-                    return false;
-                }
-            }
-        </script>
 
         <div>
-            <input type="number" placeholder=" phone no " onKeyPress="if(this.value.length==10) return false;" id="mobilenumber" value="">
+            <input type="text" id="number" placeholder="Enter phone number" name="uname" required>
         </div>
         <b><font size="+1.5"> <span id="messages" style="color: rgb(0, 0, 0)"> </span> </b></font>
         </div>

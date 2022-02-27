@@ -39,6 +39,7 @@ div .form {
 
 .recaptcha-container {
     justify-content: center;
+    align-items: center;
 }
 
 input {

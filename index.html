@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" oncontextmenu="return false">
 
 <head>
     <meta charset="UTF-8" />
@@ -44,12 +44,13 @@
         </script>
 
         <div>
-            <form action="verification.php">
-
-                <input type="text" id="number" placeholder="Enter phone number" name="uname" required>
+            <input type="number" placeholder=" phone no " onKeyPress="if(this.value.length==10) return false;" id="mobilenumber" value="">
         </div>
+        <b><font size="+1.5"> <span id="messages" style="color: rgb(0, 0, 0)"> </span> </b></font>
+        </div>
+
         <div id="recaptcha-container"></div>
-       <div> <button type="button" onclick="phoneAuth();">Send Otp</button>  </div>
+        <div> <button type="button" onclick="phoneAuth();">Send Otp</button> </div>
 
 
         <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase.js"></script>
@@ -73,7 +74,7 @@
 
         </div>
 
-      <div>  <button type="button" onclick="codeverify();">Verify code</button> </div>
+        <div> <button type="button" onclick="codeverify();">Verify code</button> </div>
 
 
         <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase.js"></script>
@@ -119,8 +120,8 @@
         </div>
         <div><label><b>Ask any Queries</b></label></div><textarea type='text' placeholder='Enter your comment here...'></textarea></div><button class="btn-send flex">BOOK NOW</button>
         <p class="footnote">&copy; Group 17 Major Project</p>
-        </form>
-        <script src="firebase.js" type="text/javascript"></script>
+    </form>
+    <script src="firebase.js" type="text/javascript"></script>
 
 </body>
 

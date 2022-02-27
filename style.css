@@ -37,6 +37,10 @@ div .form {
     margin: 10px 0;
 }
 
+.recaptcha-container {
+    justify-content: center;
+}
+
 input {
     text-align: center;
     border-radius: 15px;

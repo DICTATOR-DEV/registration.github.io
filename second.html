@@ -1,79 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>REGISTRATION FORM</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Firebase Phone Verification</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
-    <form onsubmit="return error () ">
-        <h4>Patient Registration Form</h4>
-
-        <div>
-            <input type="name-label" placeholder=" Your name " />
-            <input type="name-label" placeholder=" last name " />
-        </div>
-
-        <div>
-            <input type="email" placeholder=" e-mail " />
-        </div>
-        <script style="display: none">
-            function error() {
-                var a = document.getElementById("mobilenumber").value;
-                if (a == "") {
-                    document.getElementById("messages").innerHTML = "Please fill Mobile Number";
-                    return false;
-                }
-                if (a.length > 10) {
-                    document.getElementById("messages").innerHTML = " Mobile Number must be 10 digit";
-                    return false;
-                }
-                if (a.length < 10) {
-                    document.getElementById("messages").innerHTML = "Mobile Number must be 10 digit";
-                    return false;
-                }
-                if ((a.charAt(0) != 9) && (a.charAt(0) != 8) && (a.charAt(0) != 7) && (a.charAt(0) != 6)) {
-                    document.getElementById("messages").innerHTML = " Mobile Number must start with 9, 8, 7 and 6";
-                    return false;
-                }
-            }
-        </script>
-
-        <div>
-            <form action="verification.php">
-
-                <input type="text" id="number" placeholder="Enter phone number" name="uname" required>
-        </div>
-        <div id="recaptcha-container"></div>
-       <div> <button type="button" onclick="phoneAuth();">Send Otp</button>  </div>
-
-
-        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase.js"></script>
-        <script>
-            // Your web app's Firebase configuration
-            var firebaseConfig = {
-                appId: "1:99446038979:web:6876f093329352b3c71d76",
-                apiKey: "AIzaSyDqoyvnqM44fvu4Gvlfc_Dj1Di2VztJxK4",
-                authDomain: "phone-auth-76a5e.firebaseapp.com",
-                projectId: "phone-auth-76a5e",
-                storageBucket: "phone-auth-76a5e.appspot.com",
-                messagingSenderId: "99446038979",
-                measurementId: "G-CCJ2B0YHR3"
-            };
-            // Initialize Firebase
-            firebase.initializeApp(firebaseConfig);
-            firebase.analytics();
-        </script>
+    <form>
 
         <input type="text" id="verificationCode" placeholder="Enter verification code">
 
         </div>
 
-      <div>  <button type="button" onclick="codeverify();">Verify code</button> </div>
+        <button type="button" onclick="codeverify();">Verify code</button>
 
 
         <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase.js"></script>
@@ -119,9 +61,8 @@
         </div>
         <div><label><b>Ask any Queries</b></label></div><textarea type='text' placeholder='Enter your comment here...'></textarea></div><button class="btn-send flex">BOOK NOW</button>
         <p class="footnote">&copy; Group 17 Major Project</p>
-        </form>
-        <script src="firebase.js" type="text/javascript"></script>
-
+    </form>
+    <script src="firebase.js" type="text/javascript"></script>
 </body>
 
 </html>
